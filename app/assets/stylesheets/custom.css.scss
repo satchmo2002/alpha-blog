@@ -24,17 +24,28 @@ $navbar-default-bg: black;
 }
 
 .jumbotron {
-    background-image: asset-url("rorlogo3-2.png");
+    background-image: asset-url("rorgem.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     height:550px;
 }
 
 .jumbotron h1 {
-    color: #fff;
+    color: #000;
     text-align: center;
     margin-bottom: 30px;
     letter-spacing: -1px;
     font-weight: bold;
+    font-size: 600%;
+}
+
+.stroke {
+    color: white;
+    text-shadow:
+    -2px -2px 0 #fff,
+    2px -2px 0 #fff,
+    -2px 2px 0 #fff,
+    2px 2px 0 #fff;
 }
 
 .btn-xlarge {
