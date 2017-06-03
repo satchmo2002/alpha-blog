@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   
   resources :articles
   
+  get 'signup', to: 'users#new'
+  resources :users, execpt: [:new]
+  
   #get 'articles/new', to: 'articles#new'
 
   # Example of regular route:
