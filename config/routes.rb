@@ -13,6 +13,10 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   resources :users, execpt: [:new]
   
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+  
   #get 'articles/new', to: 'articles#new'
 
   # Example of regular route:
