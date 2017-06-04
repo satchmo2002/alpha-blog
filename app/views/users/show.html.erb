@@ -6,6 +6,11 @@
 </div>
 <h4 align= "center"><%= @user.username %>'s articles</h4>
 <div align= "center" >
+    <% if logged_in? and current_user.admin?%>
+        <%= link_to "Delete this user", user_path(@user), method: :delete, data: { confirm: "Are you sure you want to delete the user and all their articles?"}, class: "btn btn-xs btn-danger" %>
+    <% end %>
+</div>
+<div align= "center" >
     <%= will_paginate @user_articles %>
 </div>
 <%= render "articles/article", obj: @user_articles %>
