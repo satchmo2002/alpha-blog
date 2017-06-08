@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   
+  resources :categories, except: [:destroy]
+  
   #get 'articles/new', to: 'articles#new'
 
   # Example of regular route:
